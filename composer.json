@@ -1,0 +1,23 @@
+{
+	"name": "tractorcow/silverstripe-sliderfield",
+	"description": "Simple slider field for Silverstripe",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "slider", "jqueryui"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Damian Mooyman",
+			"email": "damian.mooyman@gmail.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/tractorcow/silverstripe-sliderfield/issues"
+	},
+	"require": {
+		"silverstripe/framework": "3.*",
+		"composer/installers": "*"
+	},
+	"extra": {
+		"installer-name": "sliderfield"
+	}
+}
