@@ -1,4 +1,3 @@
-
 (function($){
 	$.entwine('ss', function($) {
 		$('input.slider').entwine({
@@ -12,7 +11,7 @@
 				return this.data('orientation');
 			},
 			limitValue: function() {
-				val = parseInt(this.val());
+				val = parseInt(this.val()) || this.getMin();
 				val = Math.max(this.getMin(), Math.min(this.getMax(), val));
 				this.val(val);
 				return val;
