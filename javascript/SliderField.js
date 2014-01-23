@@ -12,9 +12,8 @@
 				return this.data('orientation');
 			},
 			limitValue: function() {
-				val = isNaN(this.val())
-					? this.getMin()
-					: parseInt(this.val());
+				val = parseInt(this.val());
+				if(isNaN(val)) val = 0;
 				val = Math.max(this.getMin(), Math.min(this.getMax(), val));
 				this.val(val);
 				return val;
