@@ -14,12 +14,24 @@ class SliderField extends NumericField {
 	
 	protected $orientation = 'horizontal';
 	
+	/**
+	 * Gets the orientation of this field
+	 * 
+	 * @return string Either 'horizontal' or 'vertical'
+	 */
 	public function getOrientation() {
 		return $this->orientation;
 	}
 	
+	/**
+	 * Set the orientation of this field to horizontal or vertical
+	 * 
+	 * @param string $orientation Either 'horizontal' or 'vertical'
+	 * @return self
+	 */
 	public function setOrientation($orientation) {
 		$this->orientation = $orientation;
+		return $this;
 	}
 	
 	/**
@@ -66,7 +78,7 @@ class SliderField extends NumericField {
 	/**
 	 * Set the maximum range value
 	 * 
-	 * @param type $maximum
+	 * @param integer $maximum
 	 */
 	public function setMaximum($maximum) {
 		if($maximum === null) $maximum = self::config()->default_maximum;
@@ -85,7 +97,7 @@ class SliderField extends NumericField {
 	/**
 	 * Set the minimum range value
 	 * 
-	 * @param type $minimum
+	 * @param integer $minimum
 	 */
 	public function setMinimum($minimum) {
 		if($minimum === null) $minimum = self::config()->default_minimum;
