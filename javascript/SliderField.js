@@ -19,8 +19,8 @@
 				return val;
 			},
 			getCleanVal: function(){
-				return parseInt(this.val().replace(/,/g, ""))
-			}
+				return parseInt(this.val().replace(/,/g, ""));
+			},
 			onmatch: function() {
 				var self = this;
 				var val = self.limitValue();
