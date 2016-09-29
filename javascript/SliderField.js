@@ -12,11 +12,15 @@
 				return this.data('orientation');
 			},
 			limitValue: function() {
-				val = parseInt(this.val());
+				var val = this.getCleanVal();
+				if(isNaN(val)) val = 0;
 				val = Math.max(this.getMin(), Math.min(this.getMax(), val));
 				this.val(val);
 				return val;
 			},
+			getCleanVal: function(){
+				return parseInt(this.val().replace(/,/g, ""))
+			}
 			onmatch: function() {
 				var self = this;
 				var val = self.limitValue();
