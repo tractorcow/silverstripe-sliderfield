@@ -133,6 +133,7 @@ class SliderField extends NumericField
         return array_merge(
             parent::getAttributes(),
             array(
+                'value' => $this->dataValue(),
                 'data-min' => $this->getMinimum(),
                 'data-max' => $this->getMaximum(),
                 'data-orientation' => $this->getOrientation()
