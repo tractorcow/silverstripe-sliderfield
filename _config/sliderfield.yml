@@ -1,6 +1,6 @@
 ---
 Name: sliderfieldconfig
 ---
-SliderField:
+TractorCow\SliderField\SliderField:
   default_minimum: 0
   default_maximum: 100
