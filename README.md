@@ -8,14 +8,14 @@ This module adds a SliderField that allows you to enter a numeric value with a d
 
 ## Requirements
 
- * SilverStripe 3 or above
+ * SilverStripe 4 or above
 
 ## Installation Instructions
 
  * Extract all files into the 'sliderfield' folder under your Silverstripe root, or install using composer
 
 ```bash
-composer require "tractorcow/silverstripe-sliderfield" "3.0.*@dev"
+composer require "tractorcow/silverstripe-sliderfield" 
 ```
 
 ## Usage
