@@ -18,6 +18,9 @@
 		"composer/installers": "*"
 	},
 	"extra": {
-		"installer-name": "sliderfield"
-	}
+		"installer-name": "sliderfield",
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        }
+    }
 }
