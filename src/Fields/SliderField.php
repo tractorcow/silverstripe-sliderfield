@@ -1,5 +1,11 @@
 <?php
 
+namespace TractorCow\SliderField;
+
+use SilverStripe\Forms\Form;
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\NumericField;
+
 /**
  * Field for a numeric slider
  *
@@ -8,27 +14,27 @@
  */
 class SliderField extends NumericField
 {
-    
+
     public function Type()
     {
         return 'slider ' . parent::Type();
     }
-    
+
     protected $orientation = 'horizontal';
-    
+
     /**
      * Gets the orientation of this field
-     * 
+     *
      * @return string Either 'horizontal' or 'vertical'
      */
     public function getOrientation()
     {
         return $this->orientation;
     }
-    
+
     /**
      * Set the orientation of this field to horizontal or vertical
-     * 
+     *
      * @param string $orientation Either 'horizontal' or 'vertical'
      * @return self
      */
@@ -37,54 +43,54 @@ class SliderField extends NumericField
         $this->orientation = $orientation;
         return $this;
     }
-    
+
     /**
      * Max slider value
      *
      * @var integer
      */
     protected $maximum;
-    
+
     /**
      * Minimum slider value
      *
      * @var integer
      */
     protected $minimum;
-    
+
     /**
      * Create a SliderField object
-     * 
+     *
      * @param string $name
      * @param string $title
-     * @param integer $minimum
-     * @param integer $maximum
-     * @param integer $value
-     * @param integer $maxLength
+     * @param int $minimum
+     * @param int $maximum
+     * @param mixed $value
+     * @param int $maxLength
      * @param Form $form
      */
     public function __construct($name, $title = null, $minimum = null, $maximum = null, $value = '', $maxLength = null, $form = null)
     {
         parent::__construct($name, $title, $value, $maxLength, $form);
-        
+
         $this->setMaximum($maximum);
         $this->setMinimum($minimum);
     }
-    
+
     /**
      * Get the maximum range value
-     * 
+     *
      * @return integer
      */
     public function getMaximum()
     {
         return $this->maximum;
     }
-    
+
     /**
      * Set the maximum range value
-     * 
-     * @param integer $maximum
+     *
+     * @param int $maximum
      */
     public function setMaximum($maximum)
     {
@@ -93,21 +99,21 @@ class SliderField extends NumericField
         }
         $this->maximum = $maximum;
     }
-    
+
     /**
      * Get the minimum range value
-     * 
+     *
      * @return integer
      */
     public function getMinimum()
     {
         return $this->minimum;
     }
-    
+
     /**
      * Set the minimum range value
-     * 
-     * @param integer $minimum
+     *
+     * @param int $minimum
      */
     public function setMinimum($minimum)
     {
@@ -119,15 +125,12 @@ class SliderField extends NumericField
 
     public function Field($properties = array())
     {
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery-ui/jquery-ui.js');
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
-        Requirements::javascript(basename(dirname(dirname(__FILE__))) . '/javascript/SliderField.js');
-        Requirements::css(basename(dirname(dirname(__FILE__))) . '/css/SliderField.css');
-
+        Requirements::javascript('silverstripe/admin: thirdparty/jquery-ui/jquery-ui.js');
+        Requirements::javascript('tractorcow/silverstripe-sliderfield:client/dist/js/sliderfield.js');
+        Requirements::css('tractorcow/silverstripe-sliderfield:client/dist/styles/SliderField.css');
         return parent::Field($properties);
     }
-    
+
     public function getAttributes()
     {
         return array_merge(
