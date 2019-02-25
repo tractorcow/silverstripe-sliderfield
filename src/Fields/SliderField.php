@@ -127,7 +127,7 @@ class SliderField extends NumericField
     {
         Requirements::javascript('silverstripe/admin: thirdparty/jquery-ui/jquery-ui.js');
         Requirements::javascript('tractorcow/silverstripe-sliderfield:client/dist/js/sliderfield.js');
-        Requirements::css('tractorcow/silverstripe-sliderfield:client/dist/styles/SliderField.css');
+        Requirements::css('tractorcow/silverstripe-sliderfield:client/dist/styles/sliderfield.css');
         return parent::Field($properties);
     }
 
