@@ -16,7 +16,7 @@ This module adds a SliderField that allows you to enter a numeric value with a d
  * Extract all files into the 'sliderfield' folder under your Silverstripe root, or install using composer
 
 ```bash
-composer require "andrewhoule/silverstripe-sliderfield" 
+composer require "tractorcow/silverstripe-sliderfield" 
 ```
 
 ## Usage

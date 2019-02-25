@@ -1,5 +1,5 @@
 {
-    "name": "andrewhoule/silverstripe-sliderfield",
+    "name": "tractorcow/silverstripe-sliderfield",
     "description": "Simple slider field for Silverstripe",
     "type": "silverstripe-vendormodule",
     "keywords": [
