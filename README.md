@@ -4,7 +4,6 @@ This module adds a SliderField that allows you to enter a numeric value with a d
 
 ## Credits and Authors
 
- * This is a fork of the original tractorcow sliderfields module. All that is changed is fixing the title case on the CSS path.
  * Damian Mooyman - <https://github.com/tractorcow/silverstripe-sliderfield>
 
 ## Requirements
