@@ -19,7 +19,7 @@
     },
     "require": {
         "silverstripe/vendor-plugin": "^1.0",
-        "silverstripe/cms": "^4.0"
+        "silverstripe/admin": "^1"
     },
     "autoload": {
         "psr-4": {
