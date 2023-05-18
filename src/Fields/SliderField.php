@@ -98,6 +98,8 @@ class SliderField extends NumericField
             $maximum = self::config()->default_maximum;
         }
         $this->maximum = $maximum;
+
+        return $this;
     }
 
     /**
@@ -121,6 +123,7 @@ class SliderField extends NumericField
             $minimum = self::config()->default_minimum;
         }
         $this->minimum = $minimum;
+        return $this;
     }
 
     public function Field($properties = array())
