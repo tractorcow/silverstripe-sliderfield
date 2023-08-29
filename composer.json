@@ -18,8 +18,8 @@
         "issues": "https://github.com/tractorcow/silverstripe-sliderfield/issues"
     },
     "require": {
-        "silverstripe/vendor-plugin": "^1.0",
-        "silverstripe/admin": "^1"
+        "silverstripe/vendor-plugin": "^1.0 || ^2.0",
+        "silverstripe/admin": "^1 || ^2"
     },
     "autoload": {
         "psr-4": {
